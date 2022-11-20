@@ -1,0 +1,32 @@
+{
+  "name": "use-svg-maker",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "build:package": "ts-node --project tsconfig-build.json pre-publish.ts && npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p tsconfig-esm.json",
+    "build:cjs": "tsc -p tsconfig-cjs.json"
+  },
+  "dependencies": {
+    "leva": "^0.9.34",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "postcss": "^8.4.19",
+    "rimraf": "^3.0.2",
+    "tailwindcss": "^3.2.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.6.4",
+    "vite": "^3.2.3"
+  }
+}
